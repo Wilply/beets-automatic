@@ -4,6 +4,7 @@ Beets is the media library management system for obsessive-compulsive music geek
 
 This is a docker version which is fully automatic, it will scan the input folders untils it detect changes, the it will import the files from the input directory and process them then start again.  
 It's one of my first docker image, any advise will be welcome.
+Docker links: (https://hub.docker.com/r/wilply/beets-automatic/)
 
 ### How to use this image
 ##### Supported ENV variables

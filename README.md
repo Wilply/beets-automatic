@@ -22,7 +22,7 @@ It's one of my first docker image, any advise will be welcome.
 docker run --name automatic-beets \
             -v /path/to/your/input/foler:/input/ \
             -v /path/to/your/music/library:/musiclibrary/ \
-             Wilply/automatic-beets
+             Wilply/beets-automatic
 ```
 ###### Complete
 ```
@@ -35,7 +35,7 @@ docker run --name automatic-beets \
             -v /path/to/your/input/foler:/input/ \
             -v /path/to/your/music/library:/musiclibrary/ \
             -v /path/to/config:/home/abc/.config/beets/ \
-             Wilply/automatic-beets
+             Wilply/beets-automatic
 ```
 ###### Compose
 ```
@@ -43,7 +43,7 @@ version: '3'
 
 services:
   beets
-    image: Wilply/automatic-beets
+    image: Wilply/beets-automatic
     restart: always
     environment:
       - DISCOGS_TOKEN="your disogs api token"

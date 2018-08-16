@@ -3,10 +3,10 @@ FROM python:3.6.6-slim-stretch
 MAINTAINER Wilply
 
 ENV DISCOGS_TOKEN="none"
-ENV UID=1001
-ENV GID=1001
-ENV MODE="move"
-ENV DEL_INPUT="true"
+ENV PUID=1001
+ENV PGID=1001
+ENV MODE="copy"
+ENV DEL_INPUT="false"
 
 RUN apt update && apt install -y \
     inotify-tools \

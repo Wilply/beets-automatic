@@ -1,0 +1,26 @@
+plugins: chroma fromfilename discogs embedart fetchart
+directory: /musiclibrary
+library: /musiclibrary/musiclibrary.db
+art_filename: albumart
+threaded: yes
+
+import:
+  write: yes
+  move: yes
+  resume: yes
+  log: /home/abc/.config/beets/import.log
+  duplicate_action: merge
+  quiet_fallback: asis
+
+match:
+  strong_rec_thresh: 0.15
+
+embedart:
+  auto: yes
+  remove_art_file: yes
+
+fetchart:
+  auto: yes
+
+discogs:
+  user_token: DISCOGS_TOKEN

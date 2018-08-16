@@ -1,0 +1,13 @@
+version: '3'
+services:
+  beets:
+    image: beets:auto
+    environment:
+      - DISCOGS_TOKEN=mIHoYFstMolzNkvzZoQopOUyCOiHkHXkqHPFaBSl
+      - PGID=1200
+      - PUID=2000
+      - MODE="copy"
+    volumes:
+      - /home/clement/beets/input:/input/
+      - /home/clement/beets/library:/musiclibrary/
+      - /home/clement/beets/config:/home/abc/.config/beets/

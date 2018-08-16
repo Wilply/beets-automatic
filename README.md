@@ -43,7 +43,7 @@ docker run --name automatic-beets \
 version: '3'
 
 services:
-  beets
+  beets:
     image: Wilply/beets-automatic
     restart: always
     environment:

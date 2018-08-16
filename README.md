@@ -21,7 +21,8 @@ It's one of my first docker image, any advise will be welcome.
 ```
 docker run --name automatic-beets \
             -v /path/to/your/input/foler:/input/ \
-            -v /path/to/your/music/library:/musiclibrary/ \
+            -v /path/to/your/music/library:/musiclibrary/music \
+            -v /path/to/your/beetsmusic.db:/musiclibrary/beetsmusic.db
              Wilply/automatic-beets
 ```
 ###### Complete
@@ -33,8 +34,9 @@ docker run --name automatic-beets \
             -e MODE="move" \
             -e DEL_INPUT="false" \
             -v /path/to/your/input/foler:/input/ \
-            -v /path/to/your/music/library:/musiclibrary/ \
+            -v /path/to/your/music/library:/musiclibrary/music/ \
             -v /path/to/config:/home/abc/.config/beets/ \
+            -v /path/to/your/beetsmusic.db:/musiclibrary/beetsmusic.db
              Wilply/automatic-beets
 ```
 ###### Compose
@@ -53,6 +55,7 @@ services:
       - DEL_INPUT="false"
     volumes:
       - /path/to/your/input/foler:/input/
-      - /path/to/your/music/library:/musiclibrary/
+      - /path/to/your/music/library:/musiclibrary/music/
       - /path/to/config:/home/abc/.config/beets/
+      - /path/to/your/beetsmusic.db:/musiclibrary/beetsmusic.db
 ```

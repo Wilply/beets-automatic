@@ -7,7 +7,7 @@ It's one of my first docker image, any advise will be welcome.
 
 ### How to use this image
 ##### Supported ENV variables
-* DISCOGS_TOKEN ``` ``` The token for the [discogs API](https://www.discogs.com/developers/#) If not set, beets will not use discogs
+* DISCOGS_TOKEN ``` ``` The token for the [discogs API](https://www.discogs.com/developers/#). If not set, beets will not use discogs
 * PGID ``` ``` User uid beets will run as. *Default 1001*
 * PGID ``` ``` Same but for group gid. *Default 1001*
 * MODE ``` ``` Either move or copy, set if you want your files to be copied or moved from the input folder. *Default "copy"*

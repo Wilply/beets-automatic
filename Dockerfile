@@ -37,7 +37,8 @@ RUN rm -rf /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
 
-VOLUME /root/.config/beets/
+VOLUME /home/abc/.config/beets/
 VOLUME /app
+VOLUME /musiclibrary
 
 CMD ["./start.sh"]

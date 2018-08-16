@@ -1,6 +1,6 @@
 plugins: chroma fromfilename discogs embedart fetchart
-directory: /musiclibrary
-library: /musiclibrary/musiclibrary.db
+directory: /musiclibrary/music
+library: /musiclibrary/beetsmusic.db
 art_filename: albumart
 threaded: yes
 

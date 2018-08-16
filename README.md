@@ -22,8 +22,14 @@ Docker links: (https://hub.docker.com/r/wilply/beets-automatic/)
 ```
 docker run --name automatic-beets \
             -v /path/to/your/input/foler:/input/ \
+<<<<<<< HEAD
+            -v /path/to/your/music/library:/musiclibrary/music \
+            -v /path/to/your/beetsmusic.db:/musiclibrary/beetsmusic.db
+             Wilply/automatic-beets
+=======
             -v /path/to/your/music/library:/musiclibrary/ \
              Wilply/beets-automatic
+>>>>>>> 529935be2a42edceb09ea154a65299ac37aebecf
 ```
 ###### Complete
 ```
@@ -34,9 +40,14 @@ docker run --name automatic-beets \
             -e MODE="move" \
             -e DEL_INPUT="false" \
             -v /path/to/your/input/foler:/input/ \
-            -v /path/to/your/music/library:/musiclibrary/ \
+            -v /path/to/your/music/library:/musiclibrary/music/ \
             -v /path/to/config:/home/abc/.config/beets/ \
+<<<<<<< HEAD
+            -v /path/to/your/beetsmusic.db:/musiclibrary/beetsmusic.db
+             Wilply/automatic-beets
+=======
              Wilply/beets-automatic
+>>>>>>> 529935be2a42edceb09ea154a65299ac37aebecf
 ```
 ###### Compose
 ```
@@ -54,6 +65,7 @@ services:
       - DEL_INPUT="false"
     volumes:
       - /path/to/your/input/foler:/input/
-      - /path/to/your/music/library:/musiclibrary/
+      - /path/to/your/music/library:/musiclibrary/music/
       - /path/to/config:/home/abc/.config/beets/
+      - /path/to/your/beetsmusic.db:/musiclibrary/beetsmusic.db
 ```

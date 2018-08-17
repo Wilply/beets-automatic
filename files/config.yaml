@@ -1,4 +1,4 @@
-plugins: chroma fromfilename discogs embedart fetchart
+plugins: chroma fetchart embedart fromfilename discogs
 directory: /musiclibrary/music
 library: /musiclibrary/beetsmusic.db
 art_filename: albumart

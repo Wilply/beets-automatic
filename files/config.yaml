@@ -4,6 +4,11 @@ library: /musiclibrary/beetsmusic.db
 art_filename: albumart
 threaded: yes
 
+paths:
+    default: $albumartist/$album%aunique{}/$title
+    singleton: Non-Album/$artist/$title
+    comp: Compilations/$album%aunique{}/$title
+
 import:
   write: yes
   move: yes

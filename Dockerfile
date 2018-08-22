@@ -2,11 +2,13 @@ FROM python:3.6.6-slim-stretch
 # Error with python3.7
 MAINTAINER Wilply
 
-ENV DISCOGS_TOKEN="none"
+ENV DISCOGS_TOKEN=none
 ENV PUID=1001
 ENV PGID=1001
-ENV MODE="copy"
-ENV DEL_INPUT="false"
+ENV MODE=copy
+ENV DEL_INPUT=false
+ENV INIT_TAG=false
+
 
 RUN apt update && apt install -y \
     inotify-tools \
@@ -28,17 +30,16 @@ RUN pip install --no-cache-dir --progress-bar off \
 
 WORKDIR /app
 
-RUN mkdir -p /input /musiclibrary /home/abc/.config/beets
-
-COPY files/ /app/files
-COPY start.sh /app/
+RUN mkdir -p /input /music /home/abc/.config/beets
 
 RUN rm -rf /tmp/* \
     /var/lib/apt/lists/* \
     /var/tmp/*
 
+COPY root/ /app/
+
 VOLUME /home/abc/.config/beets/
 VOLUME /app
-VOLUME /musiclibrary
+VOLUME /music
 
 CMD ["./start.sh"]

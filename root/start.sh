@@ -2,8 +2,8 @@
 
 if [ ! -e /app/firststart ]; then
   echo "[INFO] First start, initilization"
-  touch /app/firststart
   bash -c /app/files/init.sh
+  touch /app/firststart
   if [ $? -eq 0 ]; then
     echo "[INFO] Initilization sucessful"
   else

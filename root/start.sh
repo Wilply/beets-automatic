@@ -17,8 +17,8 @@ fi
 echo "[INFO] Starting Beets"
 echo "[INFO] Waiting for events"
 while inotifywait -e CLOSE_WRITE -e CLOSE_NOWRITE -e MOVED_TO -e CREATE /input ; do
-  echo "[INFO] Events Received, wait 20s"
-  sleep 20
+  echo "[INFO] Events Received, wait 10s"
+  sleep 10
   echo "[INFO] Chown input files"
   chown -R abc:abc /input
   chmod -R 750 /input

@@ -23,14 +23,14 @@ else
   echo "[INFO] Setting move mode"
 fi
 if $INIT_TAG; then
-  echo "[INFO] Scanning and importing old library (tag)"
+  echo "[INFO] Scanning and importing old library (and tagging)"
   echo "****************************************"
   echo ""
   su abc -c /app/files/beets_import.sh
   echo ""
   echo "****************************************"
 else
-  echo "[INFO] Scanning and Iimporting old library (no tag)"
+  echo "[INFO] Scanning and importing old library (without tagging)"
   echo ""
   echo "****************************************"
   echo ""
